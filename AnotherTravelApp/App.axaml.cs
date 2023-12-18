@@ -1,10 +1,12 @@
+using System;
 using AnotherTravelApp.Services;
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using AnotherTravelApp.ViewModels;
 using AnotherTravelApp.Views;
-
+using Avalonia.Platform;
+using ReactiveUI;
 
 
 namespace AnotherTravelApp;
@@ -22,17 +24,19 @@ public class App : Application
         {
             case IClassicDesktopStyleApplicationLifetime desktop:
             {
-                var apiService = new ApiService();
-                desktop.MainWindow = new MainWindow();
-                desktop.MainWindow.DataContext = new MainViewModel(apiService);
+                Console.WriteLine("Desktop MainWindow");
+                desktop.MainWindow = new MainWindow
+                {
+                    DataContext = new MainWindowViewModel(),
+                };
                 break;
             }
             case ISingleViewApplicationLifetime singleViewPlatform:
             {
-                var apiService = new ApiService();
+                Console.WriteLine("Desktop MainView");
                 singleViewPlatform.MainView = new MainView()
                 {
-                    DataContext = new MainViewModel(apiService)
+                    DataContext = new MainViewModel()
                 };
                 break;
             }

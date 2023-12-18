@@ -10,8 +10,7 @@ public partial class LocationView : ReactiveUserControl<LocationViewModel>
 {
     public LocationView()
     {
-        Console.WriteLine("LocationView activated");
         this.WhenActivated(disposables => { });
-        InitializeComponent();
+        AvaloniaXamlLoader.Load(this);
     }
 }

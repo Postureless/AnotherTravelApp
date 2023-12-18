@@ -9,10 +9,10 @@ public class MainViewModel: ReactiveObject, IScreen
 {
     public RoutingState Router { get; } = new RoutingState();
 
-    public MainViewModel(ApiService apiService)
+    public MainViewModel()
     {
         Console.WriteLine("MainViewModel activated");
-        var screen = new LocationViewModel(Router, this, apiService);
+        var screen = new LocationViewModel(Router, this, apiService: new ApiService());
         Router.Navigate.Execute(screen);
     }
 }

@@ -134,3 +134,4 @@ C:\Users\sleepyjoe\RiderProjects\AnotherTravelApp\AnotherTravelApp\obj\Debug\net
 C:\Users\sleepyjoe\RiderProjects\AnotherTravelApp\AnotherTravelApp\obj\Debug\net8.0\AnotherTravelApp.csproj.CopyComplete
 C:\Users\sleepyjoe\RiderProjects\AnotherTravelApp\AnotherTravelApp\obj\Debug\net8.0\AnotherTravelApp.genruntimeconfig.cache
 C:\Users\sleepyjoe\RiderProjects\AnotherTravelApp\AnotherTravelApp\obj\Debug\net8.0\ref\AnotherTravelApp.dll
+C:\Users\sleepyjoe\RiderProjects\AnotherTravelApp\AnotherTravelApp\obj\Debug\net8.0\AnotherTravelApp.sourcelink.json

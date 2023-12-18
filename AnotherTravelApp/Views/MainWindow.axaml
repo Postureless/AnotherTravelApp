@@ -1,4 +1,6 @@
 <Window xmlns="https://github.com/avaloniaui"
+        xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+        xmlns:app="clr-namespace:AnotherTravelApp"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:AnotherTravelApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,4 +10,13 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="AnotherTravelApp">
+        <Grid>
+                <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
+                        <rxui:RoutedViewHost.DefaultContent>
+                        </rxui:RoutedViewHost.DefaultContent>   
+                        <rxui:RoutedViewHost.ViewLocator>
+                                <app:AppViewLocator />
+                        </rxui:RoutedViewHost.ViewLocator>
+                </rxui:RoutedViewHost>
+        </Grid>
 </Window>

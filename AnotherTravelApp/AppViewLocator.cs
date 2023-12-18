@@ -5,14 +5,11 @@ using ReactiveUI;
 
 namespace AnotherTravelApp;
 
-public class AppViewLocator : IViewLocator
+public class AppViewLocator : ReactiveUI.IViewLocator
 {
     public IViewFor ResolveView<T>(T viewModel, string contract = null) => viewModel switch
     {
-        MainViewModel mainViewModel => new MainView() { DataContext = mainViewModel},
-        LocationViewModel locationViewModel => new LocationView() { DataContext = locationViewModel},
-        SearchViewModel searchViewModel => new SearchView() {DataContext = searchViewModel},
-        PopularRoutesViewModel popularRoutesViewModel => new PopularRoutesView() {DataContext = popularRoutesViewModel},
+        LocationViewModel context => new LocationView() { DataContext = context },
         _ => throw new ArgumentOutOfRangeException(nameof(viewModel))
     };
 }

@@ -8,9 +8,10 @@ namespace AnotherTravelApp.ViewModels
 {
     public class LocationViewModel : ReactiveObject, IRoutableViewModel
     {
-        private readonly ApiService _apiService;
-
+        public IScreen HostScreen { get; }
         public string UrlPathSegment { get; } = Guid.NewGuid().ToString().Substring(0, 5);
+        
+        private readonly ApiService _apiService;
         private string _location;
 
         public string Location
@@ -19,7 +20,6 @@ namespace AnotherTravelApp.ViewModels
             set => this.RaiseAndSetIfChanged(ref _location, value);
         }
 
-        public IScreen HostScreen { get; }
         public ReactiveCommand<Unit, IRoutableViewModel> GoNext { get; }
 
         public LocationViewModel(RoutingState router, IScreen hostScreen, ApiService apiService)
