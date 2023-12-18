@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="AnotherTravelApp/App.axaml" value="AnotherTravelApp/AnotherTravelApp.csproj" />
+        <entry key="AnotherTravelApp/Views/LocationView.axaml" value="AnotherTravelApp/AnotherTravelApp.csproj" />
+        <entry key="AnotherTravelApp/Views/MainView.axaml" value="AnotherTravelApp/AnotherTravelApp.csproj" />
+        <entry key="AnotherTravelApp/Views/MainWindow.axaml" value="AnotherTravelApp/AnotherTravelApp.csproj" />
+        <entry key="AnotherTravelApp/Views/PopularRoutesView.axaml" value="AnotherTravelApp/AnotherTravelApp.csproj" />
+        <entry key="AnotherTravelApp/Views/SearchView.axaml" value="AnotherTravelApp/AnotherTravelApp.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

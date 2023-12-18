@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AnotherTravelApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AnotherTravelApp.Views.PopularRoutesView"
+             x:DataType="vm:PopularRoutesViewModel">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <Border Background="Purple" CornerRadius="15" Margin="100, 50, 100, 50">
+                <DataGrid ItemsSource="{Binding DirectionsData.Data}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Destination" Binding="{Binding Destination}"/>
+                        <DataGridTextColumn Header="Departure" Binding="{Binding DepartureAt}"/>
+                        <DataGridTextColumn Header="Return" Binding="{Binding ReturnAt}"/>
+                        <DataGridTextColumn Header="Airline" Binding="{Binding Airline}"/>
+                        <DataGridTextColumn Header="Flight Number" Binding="{Binding FlightNumber}"/>
+                        <DataGridTextColumn Header="Price" Binding="{Binding Price}"/>
+                        <DataGridTextColumn Header="Transfers" Binding="{Binding Transfers}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AnotherTravelApp.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AnotherTravelApp.Views.SearchView"
+             x:DataType="vm:SearchViewModel">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Background="Black">
+        <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" CornerRadius="5" Watermark="From" Width="250" Height="30" Margin="1"/>
+        <TextBox VerticalAlignment="Center" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" CornerRadius="5" Watermark="Where" Width="250" Height="30" Margin="1"/>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBox VerticalAlignment="Center" CornerRadius="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Watermark="Date" Width="15" Height="30" Margin="1"/>
+            <TextBox VerticalAlignment="Center" CornerRadius="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Watermark="1" Width="15" Height="30" Margin="1"/>
+            <Button VerticalAlignment="Center" CornerRadius="5" Content="Start" Width="119" Height="30" Margin="1, 1, 1, 1" Background="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button VerticalAlignment="Center" CornerRadius="5" Content="Popular" Width="100" Height="30" Margin="1, 1, 1, 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="White"/>
+            <Button VerticalAlignment="Center" CornerRadius="5" Content="History" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="150" Height="30" Margin="1" Background="White"/>
+        </StackPanel>   
+    </StackPanel>
+</UserControl>
