@@ -10,13 +10,16 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="AnotherTravelApp">
-        <Grid>
-                <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
-                        <rxui:RoutedViewHost.DefaultContent>
-                        </rxui:RoutedViewHost.DefaultContent>   
-                        <rxui:RoutedViewHost.ViewLocator>
-                                <app:AppViewLocator />
-                        </rxui:RoutedViewHost.ViewLocator>
-                </rxui:RoutedViewHost>
+        <Grid RowDefinitions="*,Auto">
+                <Grid>
+                        <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
+                                <rxui:RoutedViewHost.DefaultContent>
+                                </rxui:RoutedViewHost.DefaultContent>   
+                                <rxui:RoutedViewHost.ViewLocator>
+                                        <app:AppViewLocator />
+                                </rxui:RoutedViewHost.ViewLocator>
+                        </rxui:RoutedViewHost>
+                        <TextBlock Text="Still on screen"></TextBlock>
+                </Grid>
         </Grid>
 </Window>

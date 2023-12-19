@@ -1,14 +1,15 @@
-using System;
+using AnotherTravelApp.ViewModels;
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
-using AnotherTravelApp.ViewModels;
-using Avalonia.Markup.Xaml;
 
 namespace AnotherTravelApp.Views;
 
-public partial class LocationView : ReactiveUserControl<LocationViewModel>
+public partial class Response : ReactiveUserControl<ResponseViewModel>
 {
-    public LocationView()
+    public Response()
     {
         this.WhenActivated(disposables => { });
         InitializeComponent();

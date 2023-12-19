@@ -32,5 +32,8 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/sleepyjoe/RiderProjects/AnotherTravelApp/AnotherTravelApp/Views/PopularRoutesView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/sleepyjoe/RiderProjects/AnotherTravelApp/AnotherTravelApp/Views/Response.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/sleepyjoe/RiderProjects/AnotherTravelApp/AnotherTravelApp/Views/SearchView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

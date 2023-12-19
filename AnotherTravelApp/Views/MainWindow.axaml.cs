@@ -1,3 +1,4 @@
+using System;
 using AnotherTravelApp.Services;
 using Avalonia.Controls;
 using AnotherTravelApp.ViewModels;
@@ -10,6 +11,7 @@ public partial class MainWindow : ReactiveWindow<MainWindowViewModel>
 {
     public MainWindow()
     {
+        Console.WriteLine("MainWindow activated");
         this.WhenActivated(disposables => { });
         InitializeComponent();
     }

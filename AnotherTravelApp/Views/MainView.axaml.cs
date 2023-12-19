@@ -8,10 +8,9 @@ namespace AnotherTravelApp.Views;
 
 public partial class MainView : ReactiveUserControl<MainViewModel>
 {
-    private ContentControl _mainContent;
     public MainView()
     {
-        Console.WriteLine("LocationView activated");
+        Console.WriteLine("MainView activated");
         this.WhenActivated(disposables => { });
         InitializeComponent();
     }

@@ -13,6 +13,6 @@ public class MainWindowViewModel : ReactiveObject, IScreen
 
     public MainWindowViewModel()
     {
-        Router.Navigate.Execute(new LocationViewModel(Router, this, new ApiService()));
+        Router.NavigateAndReset.Execute(new LocationViewModel(Router, this, new ApiService()));
     }
 }

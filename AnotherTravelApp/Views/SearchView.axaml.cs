@@ -4,7 +4,7 @@ using AnotherTravelApp.ViewModels;
 
 namespace AnotherTravelApp.Views;
 
-public partial class SearchView : ReactiveUserControl<LocationViewModel>
+public partial class SearchView : ReactiveUserControl<SearchViewModel>
 {
     public SearchView()
     {

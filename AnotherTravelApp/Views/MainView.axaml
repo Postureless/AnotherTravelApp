@@ -1,19 +1,23 @@
 <UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
+             xmlns:app="clr-namespace:AnotherTravelApp"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:AnotherTravelApp.ViewModels"
-             xmlns:reactiveUi="http://reactiveui.net"
-             xmlns:AnotherTravelApp="clr-namespace:AnotherTravelApp"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AnotherTravelApp.Views.MainView"
              x:DataType="vm:MainViewModel">
     <Grid RowDefinitions="*,Auto">
-        <reactiveUi:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
-            <reactiveUi:RoutedViewHost.DefaultContent/>
-            <reactiveUi:RoutedViewHost.ViewLocator>
-                <AnotherTravelApp:AppViewLocator />
-            </reactiveUi:RoutedViewHost.ViewLocator>
-        </reactiveUi:RoutedViewHost>
+        <Grid>
+            <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
+                <rxui:RoutedViewHost.DefaultContent>
+                </rxui:RoutedViewHost.DefaultContent>   
+                <rxui:RoutedViewHost.ViewLocator>
+                    <app:AppViewLocator />
+                </rxui:RoutedViewHost.ViewLocator>
+            </rxui:RoutedViewHost>
+            <TextBlock Text="Still on screen"></TextBlock>
+        </Grid>
     </Grid>
 </UserControl>
