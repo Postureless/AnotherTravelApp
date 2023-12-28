@@ -10,7 +10,6 @@ public partial class MainView : ReactiveUserControl<MainViewModel>
 {
     public MainView()
     {
-        Console.WriteLine("MainView activated");
         this.WhenActivated(disposables => { });
         InitializeComponent();
     }

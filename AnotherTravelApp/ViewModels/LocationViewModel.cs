@@ -19,13 +19,10 @@ namespace AnotherTravelApp.ViewModels
             get => _location;
             set => this.RaiseAndSetIfChanged(ref _location, value);
         }
-
-        public RoutingState Router { get; } = new RoutingState();
         public ReactiveCommand<Unit, IRoutableViewModel> GoNext { get; }
         
         public LocationViewModel(RoutingState router, IScreen hostScreen, ApiService apiService)
         {
-            Console.WriteLine("LocationViewModel activated");
             HostScreen = hostScreen;
             _apiService = apiService;
 
@@ -35,7 +32,7 @@ namespace AnotherTravelApp.ViewModels
                     try
                     {
                         Console.WriteLine(Location);
-                        return Router.NavigateAndReset.Execute(new SearchViewModel(router, HostScreen, _apiService, Location));
+                        return router.Navigate.Execute(new SearchViewModel(router, HostScreen, _apiService, Location));
                     }
                     catch (Exception e)
                     {

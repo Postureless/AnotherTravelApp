@@ -20,26 +20,17 @@ public class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        switch (ApplicationLifetime)
+        if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
-            case IClassicDesktopStyleApplicationLifetime desktop:
+            desktop.MainWindow = new MainWindow();
+            desktop.MainWindow.DataContext = new MainViewModel();
+        }
+        else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
+        {
+            singleViewPlatform.MainView = new MainView()
             {
-                Console.WriteLine("Desktop MainWindow");
-                desktop.MainWindow = new MainWindow
-                {
-                    DataContext = new MainWindowViewModel(),
-                };
-                break;
-            }
-            case ISingleViewApplicationLifetime singleViewPlatform:
-            {
-                Console.WriteLine("Desktop MainView");
-                singleViewPlatform.MainView = new MainView()
-                {
-                    DataContext = new MainViewModel()
-                };
-                break;
-            }
+                DataContext = new MainViewModel()
+            };
         }
 
         base.OnFrameworkInitializationCompleted();
