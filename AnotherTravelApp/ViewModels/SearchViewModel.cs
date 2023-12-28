@@ -64,7 +64,6 @@ public class SearchViewModel : ReactiveObject, IRoutableViewModel
     
     public SearchViewModel(RoutingState router, IScreen hostScreen, ApiService apiService, string location)
     {
-        Console.WriteLine("SearchViewModel activated");
         HostScreen = hostScreen;
         _apiService = apiService;
         _dbController = new DatabaseController();
@@ -74,7 +73,6 @@ public class SearchViewModel : ReactiveObject, IRoutableViewModel
             {
                 try
                 {
-                    Console.WriteLine(location);
                     return router.Navigate.Execute(
                         new PopularRoutesViewModel(router, HostScreen, _apiService, location));
                 }
@@ -92,7 +90,21 @@ public class SearchViewModel : ReactiveObject, IRoutableViewModel
                 {
                     SaveSearchQuery();
                     return router.Navigate.Execute(
-                        new ResponseViewModel(router, HostScreen, _apiService, From, Where, DepartureDate, ReturnDate));
+                        new ResponseViewModel(router, HostScreen, _apiService, From, Where, DepartureDate, ReturnDate, location));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return Observable.Return<IRoutableViewModel>(this);
+                }
+            });
+        
+        History = ReactiveCommand.CreateFromObservable(
+            () =>
+            {
+                try
+                {
+                    return router.Navigate.Execute(new HistoryViewModel(router, HostScreen, _apiService, location));
                 }
                 catch (Exception e)
                 {

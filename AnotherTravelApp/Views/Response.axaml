@@ -14,18 +14,18 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/> 
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="Popular routes" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,15" Foreground="Black" FontSize="24" />
-
+            <TextBlock Grid.Row="0" Text="Available flights" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,15,0,15" Foreground="Black" FontSize="24" />
+            <Button Command="{Binding GoBack}" Content="←" Background="#D9D9D9" Foreground="Black"></Button>
             <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                 <DataGrid Margin=" 0, 0,0, 10" IsReadOnly="True" BorderThickness="10"
                           GridLinesVisibility="All" ItemsSource="{Binding DirectionsData}"
                           AutoGenerateColumns="False" BorderBrush="#D9D9D9"
                           Background="#D9D9D9" CornerRadius="15" FontSize="12" Foreground="Black">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Departure" Binding="{Binding DepartureAt}" Width="*" />
-                        <DataGridTextColumn Header="Return" Binding="{Binding ReturnAt}" Width="*" />
+                        <DataGridTextColumn Header="Departure" Binding="{Binding departure_at}" Width="*" />
+                        <DataGridTextColumn Header="Return" Binding="{Binding return_at}" Width="*" />
                         <DataGridTextColumn Header="Airline" Binding="{Binding Airline}" Width="*" />
-                        <DataGridTextColumn Header="Flight number" Binding="{Binding FlightNumber}" Width="*" />
+                        <DataGridTextColumn Header="Flight number" Binding="{Binding flight_number}" Width="*" />
                         <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="*" />
                         <DataGridTextColumn Header="Transfers" Binding="{Binding Transfers}" Width="*" />
                     </DataGrid.Columns>

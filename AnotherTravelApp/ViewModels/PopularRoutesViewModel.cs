@@ -24,8 +24,6 @@ namespace AnotherTravelApp.ViewModels
         public ReactiveCommand<Unit, IRoutableViewModel> GoBack { get; }
         public ReactiveCommand<Unit, Unit> Refresh { get; }
 
-        public RoutingState Router { get; } = new RoutingState();
-
         private ObservableCollection<DirectionDetails> _directionsData = new ObservableCollection<DirectionDetails>();
 
         public ObservableCollection<DirectionDetails> DirectionsData
@@ -36,13 +34,24 @@ namespace AnotherTravelApp.ViewModels
 
         public PopularRoutesViewModel(RoutingState router, IScreen hostScreen, ApiService apiService, string location)
         {
-            Console.WriteLine("PopularRoutesViewModel activated");
             HostScreen = hostScreen;
             _apiService = apiService;
             Location = location;
 
             GoBack = ReactiveCommand.CreateFromObservable(
-                () => Observable.Return<IRoutableViewModel>(new LocationViewModel(router, hostScreen, apiService))
+                () =>
+                {
+                    try
+                    {
+                        return router.Navigate.Execute(new SearchViewModel(router, HostScreen, _apiService, location));
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(e);
+                        return Observable.Return<IRoutableViewModel>(this);
+                    }
+                },
+                Observable.Return(true)
             );
 
             Refresh = ReactiveCommand.CreateFromTask(
@@ -50,7 +59,6 @@ namespace AnotherTravelApp.ViewModels
                 {
                     try
                     {
-                        Console.WriteLine("Trying to refresh");
                         var data = await _apiService.GetPopularDirectionsData(Location, "usd", "f19f8d8de5e05bc4726ebf898a67a266");
                         if (data != null)
                         {

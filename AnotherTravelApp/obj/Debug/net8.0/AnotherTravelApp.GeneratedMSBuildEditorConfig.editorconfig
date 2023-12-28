@@ -20,6 +20,9 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [C:/Users/sleepyjoe/RiderProjects/AnotherTravelApp/AnotherTravelApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/sleepyjoe/RiderProjects/AnotherTravelApp/AnotherTravelApp/Views/HistoryView.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/sleepyjoe/RiderProjects/AnotherTravelApp/AnotherTravelApp/Views/LocationView.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 

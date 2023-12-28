@@ -14,6 +14,7 @@ public class AppViewLocator : IViewLocator
         SearchViewModel context => new SearchView() { DataContext = context },
         PopularRoutesViewModel context => new PopularRoutesView() {DataContext = context },
         ResponseViewModel context => new Response() {DataContext = context},
+        HistoryViewModel context => new HistoryView() {DataContext = context},
         _ => throw new ArgumentOutOfRangeException(nameof(viewModel))
     };
 }

@@ -11,17 +11,17 @@ namespace AnotherTravelApp.Services
     public class ApiService 
     {
         private readonly HttpClient _httpClient = new();
-        JsonSerializerOptions options = new JsonSerializerOptions()
-        {
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) },
-            NumberHandling = JsonNumberHandling.AllowReadingFromString,
-            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-        };
         public async Task<PopularDirectionsData?> GetPopularDirectionsData(string origin, string currency, string token)
         {
             try
             {
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    Converters = { new JsonStringEnumConverter(JsonNamingPolicy.CamelCase) },
+                    NumberHandling = JsonNumberHandling.AllowReadingFromString,
+                    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+                };
                 var apiUrl =
                     $"https://api.travelpayouts.com/v1/city-directions?origin={origin}&currency={currency}&token={token}";
 
@@ -42,6 +42,7 @@ namespace AnotherTravelApp.Services
                     catch(Exception ex)
                     {
                         Console.WriteLine($"Deserialization failed: {ex.Message}");
+                        Console.WriteLine($"Deserialization failed: {ex.Message}");
                     }
                 }
             }
@@ -57,7 +58,10 @@ namespace AnotherTravelApp.Services
         {
             try
             {
-
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                };
                 var apiUrl = $"https://api.travelpayouts.com/v1/prices/calendar?depart_date={departDate}&origin={origin}&return_date={returnDate}&destination={destination}&calendar_type=departure_date&currency={currency}&token={token}";
 
                 var response = await _httpClient.GetAsync(apiUrl);
@@ -99,12 +103,12 @@ public class DirectionDetails
     public string Origin { get; set; }
     public string Destination { get; set; }
     public string Airline { get; set; }
-    public string  DepartureAt { get; set; }
-    public string  ReturnAt { get; set; }
+    public string  departure_at { get; set; }
+    public string  return_at { get; set; }
     
-    public string  ExpiresAt { get; set; }
+    public string  expires_at { get; set; }
     public int Price { get; set; }
-    public int FlightNumber { get; set; }
+    public int flight_number { get; set; }
     public int Transfers { get; set; }
 }
 
