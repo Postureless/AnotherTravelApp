@@ -12,7 +12,7 @@
         <rxui:RoutedViewHost Grid.Row="0" Router="{Binding Router}">
             <rxui:RoutedViewHost.DefaultContent>
             </rxui:RoutedViewHost.DefaultContent>   
-            <rxui:RoutedViewHost.ViewLocator>
+            <rxui:RoutedViewHost.ViewLocator>   
                 <app:AppViewLocator />
             </rxui:RoutedViewHost.ViewLocator>
         </rxui:RoutedViewHost>
@@ -20,6 +20,5 @@
                 <TextBox Text="{Binding Location, Mode=TwoWay}" TextAlignment="Center" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="5" Watermark="Location" Width="250" Height="45" VerticalContentAlignment="Center" Margin="10"/>
                  <Button Command="{Binding GoNext}" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="12" Content="Start" Width="250" Height="45" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             </StackPanel>
-        
     </Grid>
 </UserControl>

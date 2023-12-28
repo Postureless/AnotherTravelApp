@@ -23,6 +23,8 @@ C:\Users\sleepyjoe\.nuget\packages\avalonia.themes.simple\11.0.6\lib\net6.0\Aval
 C:\Users\sleepyjoe\.nuget\packages\avalonia.win32\11.0.6\lib\net6.0\Avalonia.Win32.dll
 C:\Users\sleepyjoe\.nuget\packages\avalonia.x11\11.0.6\lib\net6.0\Avalonia.X11.dll
 C:\Users\sleepyjoe\.nuget\packages\dynamicdata\7.9.5\lib\net6.0\DynamicData.dll
+C:\Users\sleepyjoe\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.dll
+C:\Users\sleepyjoe\.nuget\packages\entityframework\6.4.4\lib\netstandard2.1\EntityFramework.SqlServer.dll
 C:\Users\sleepyjoe\.nuget\packages\harfbuzzsharp\7.3.0\lib\net6.0\HarfBuzzSharp.dll
 C:\Users\sleepyjoe\.nuget\packages\microcom.runtime\0.11.0\lib\net5.0\MicroCom.Runtime.dll
 C:\Users\sleepyjoe\.nuget\packages\microsoft.codeanalysis.csharp\3.8.0\lib\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -40,8 +42,13 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\netstan
 C:\Users\sleepyjoe\.nuget\packages\reactiveui\18.3.1\lib\net6.0\ReactiveUI.dll
 C:\Users\sleepyjoe\.nuget\packages\skiasharp\2.88.6\lib\net6.0\SkiaSharp.dll
 C:\Users\sleepyjoe\.nuget\packages\splat\14.4.1\lib\net6.0\Splat.dll
+C:\Users\sleepyjoe\.nuget\packages\sqlite-net-pcl\1.9.141-beta\lib\netstandard2.0\SQLite-net.dll
+C:\Users\sleepyjoe\.nuget\packages\sqlitepclraw.bundle_green\2.1.2\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll
+C:\Users\sleepyjoe\.nuget\packages\sqlitepclraw.core\2.1.2\lib\netstandard2.0\SQLitePCLRaw.core.dll
+C:\Users\sleepyjoe\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.2\lib\net6.0\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.AppContext.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Buffers.dll
+C:\Users\sleepyjoe\.nuget\packages\system.codedom\4.7.0\ref\netstandard2.0\System.CodeDom.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Collections.Concurrent.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Collections.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Collections.Immutable.dll
@@ -53,12 +60,16 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.ComponentModel.EventBasedAsync.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.ComponentModel.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.ComponentModel.TypeConverter.dll
+C:\Users\sleepyjoe\.nuget\packages\system.configuration.configurationmanager\4.7.0\ref\netstandard2.0\System.Configuration.ConfigurationManager.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Configuration.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Console.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Core.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Data.Common.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Data.DataSetExtensions.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Data.dll
+C:\Users\sleepyjoe\.nuget\packages\system.data.sqlclient\4.8.1\ref\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\sleepyjoe\.nuget\packages\stub.system.data.sqlite.core.netstandard\1.0.118\lib\netstandard2.1\System.Data.SQLite.dll
+C:\Users\sleepyjoe\.nuget\packages\system.data.sqlite.ef6\1.0.118\lib\netstandard2.1\System.Data.SQLite.EF6.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Diagnostics.Contracts.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Diagnostics.Debug.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Diagnostics.DiagnosticSource.dll
@@ -162,6 +173,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Security.Cryptography.Primitives.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Security.Cryptography.X509Certificates.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Security.dll
+C:\Users\sleepyjoe\.nuget\packages\system.security.permissions\4.7.0\ref\netcoreapp3.0\System.Security.Permissions.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Security.Principal.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Security.Principal.Windows.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Security.SecureString.dll
@@ -189,6 +201,7 @@ C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Web.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Web.HttpUtility.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Windows.dll
+C:\Users\sleepyjoe\.nuget\packages\system.windows.extensions\4.7.0\ref\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Xml.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Xml.Linq.dll
 C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.0\ref\net8.0\System.Xml.ReaderWriter.dll

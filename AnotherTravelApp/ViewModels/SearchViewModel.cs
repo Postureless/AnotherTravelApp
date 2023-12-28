@@ -47,13 +47,41 @@ public class SearchViewModel : ReactiveObject, IRoutableViewModel
         get => _passangers;
         set => this.RaiseAndSetIfChanged(ref _passangers, value);
     }
-    
+
     public SearchViewModel(RoutingState router, IScreen hostScreen, ApiService apiService, string location)
     {
         Console.WriteLine("SearchViewModel activated");
         HostScreen = hostScreen;
         _apiService = apiService;
-        
-        
+
+        Popular = ReactiveCommand.CreateFromObservable(
+            () =>
+            {
+                try
+                {
+                    Console.WriteLine(location);
+                    return Router.Navigate.Execute(
+                        new PopularRoutesViewModel(router, HostScreen, _apiService, location));
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return Observable.Return<IRoutableViewModel>(this);
+                }
+            });
+
+        Response = ReactiveCommand.CreateFromObservable(
+            () =>
+            {
+                try
+                {
+                    return null;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    return Observable.Return<IRoutableViewModel>(this);
+                }
+            });
     }
 }

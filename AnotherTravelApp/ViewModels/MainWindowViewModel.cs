@@ -9,10 +9,10 @@ public class MainWindowViewModel : ReactiveObject, IScreen
 {
     public RoutingState Router { get; } = new RoutingState();
     public ReactiveCommand<Unit, IRoutableViewModel> GoNext { get; }
-
+    
 
     public MainWindowViewModel()
     {
-        Router.NavigateAndReset.Execute(new LocationViewModel(Router, this, new ApiService()));
+        Router.Navigate.Execute(new LocationViewModel(Router, this, new ApiService()));
     }
 }

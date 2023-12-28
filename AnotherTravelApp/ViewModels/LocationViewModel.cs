@@ -35,7 +35,7 @@ namespace AnotherTravelApp.ViewModels
                     try
                     {
                         Console.WriteLine(Location);
-                        return Router.Navigate.Execute(new SearchViewModel(router, HostScreen, _apiService, Location));
+                        return Router.NavigateAndReset.Execute(new SearchViewModel(router, HostScreen, _apiService, Location));
                     }
                     catch (Exception e)
                     {

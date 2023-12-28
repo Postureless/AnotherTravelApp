@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[11.0.6, )"
             },
+            "Avalonia.Controls.DataGrid": {
+              "target": "Package",
+              "version": "[11.0.6, )"
+            },
             "Avalonia.Desktop": {
               "target": "Package",
               "version": "[11.0.6, )"
@@ -63,6 +67,14 @@
             "Avalonia.Themes.Fluent": {
               "target": "Package",
               "version": "[11.0.6, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.118, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.9.141-beta, )"
             }
           },
           "imports": [

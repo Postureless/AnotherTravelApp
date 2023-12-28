@@ -1,3 +1,4 @@
+using System;
 using AnotherTravelApp.ViewModels;
 using Avalonia;
 using Avalonia.Controls;
@@ -11,7 +12,10 @@ public partial class Response : ReactiveUserControl<ResponseViewModel>
 {
     public Response()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables => 
+        {
+            ViewModel.Refresh.Execute().Subscribe();
+        });
         InitializeComponent();
     }
 }
